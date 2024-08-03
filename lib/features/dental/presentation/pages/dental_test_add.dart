@@ -60,7 +60,7 @@ class _DentalTestAddState extends State<DentalTestAdd> {
               const CustomText(text: "Doctor"),
               CustomDropdown(
                 hint: "doctor",
-                items: const ['Iqbal', 'Saif Ali', 'Thomas', 'Devid', 'Kumar'],
+                items: const ['Muhammed iqbal', 'Saif Ali', 'Thomas', 'Devid', 'Kumar'],
                 onChanged: (value) {
                   setState(() {
                     selectedDoctor = value!;
@@ -89,7 +89,7 @@ class _DentalTestAddState extends State<DentalTestAdd> {
               const CustomText(text: "Shade"),
               SizedBoxes.smallSizedBox,
               CustomTextfield(
-                label: "shade",
+                hint: "shade",
               ),
               SizedBoxes.smallSizedBox,
               const CustomText(text: "Tooth No"),
@@ -98,13 +98,13 @@ class _DentalTestAddState extends State<DentalTestAdd> {
               const CustomText(text: "Note"),
               SizedBoxes.smallSizedBox,
               CustomTextfield(
-                label: "Enter notes here",
+                hint: "Enter notes here",
               ),
               SizedBoxes.smallSizedBox,
               const CustomText(text: "Work type"),
               SizedBoxes.smallSizedBox,
               CustomTextfield(
-                label: "work type",
+                hint: "work type",
               ),
               SizedBoxes.smallSizedBox,
               const CustomText(text: "Alloy Type"),
@@ -128,7 +128,7 @@ class _DentalTestAddState extends State<DentalTestAdd> {
               const CustomText(text: "Tooth No"),
               SizedBoxes.smallSizedBox,
               CustomTextfield(
-                label: "select tooth no",
+                hint: "select tooth no",
               ),
               SizedBoxes.smallSizedBox,
               Row(
@@ -142,7 +142,7 @@ class _DentalTestAddState extends State<DentalTestAdd> {
                     SizedBoxes.smallSizedBox,
                     Container(
                       height: 50,
-                      width: screenWidth*0.35,
+                      width: screenWidth*0.4,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: Color(0xffF1FDFF)),
@@ -165,7 +165,7 @@ class _DentalTestAddState extends State<DentalTestAdd> {
                       SizedBoxes.smallSizedBox,
                       Container(
                         height: 50,
-                        width: screenWidth*0.35,
+                        width: screenWidth*0.4,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Color(0xffF1FDFF)),
