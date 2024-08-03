@@ -9,7 +9,7 @@ class CustomTextfield extends StatelessWidget {
     return TextFormField(
       decoration: InputDecoration(
         filled: true,
-        fillColor: Color(0xffebfafc),
+        fillColor: Color(0xffF1FDFF),
         label: Text(label!),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),

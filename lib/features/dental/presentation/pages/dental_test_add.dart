@@ -5,6 +5,8 @@ import 'package:cms_app/common/sized_box/sized_box.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../common/widgets/tooth_selection_dropdwon.dart';
+
 class DentalTestAdd extends StatefulWidget {
   const DentalTestAdd({super.key});
 
@@ -15,7 +17,6 @@ class DentalTestAdd extends StatefulWidget {
 class _DentalTestAddState extends State<DentalTestAdd> {
   String selectedDoctor = 'Doctor';
   String workName = 'work';
-  String toothName = 'tooth';
   String alloyType = 'alloy';
 
   @override
@@ -30,8 +31,8 @@ class _DentalTestAddState extends State<DentalTestAdd> {
         ),
         leading: IconButton(
           style: ButtonStyle(
-            minimumSize: WidgetStateProperty.all(Size(40, 40)),
-            backgroundColor: WidgetStateProperty.all(Color(0xffebfafc)),
+            minimumSize: WidgetStateProperty.all(Size(10, 10)),
+            backgroundColor: WidgetStateProperty.all(Color(0xffF1FDFF)),
           ),
           onPressed: () {},
           icon:const Center(
@@ -42,15 +43,15 @@ class _DentalTestAddState extends State<DentalTestAdd> {
             ),
           ),
           constraints:const BoxConstraints(
-            maxHeight: 40,
-            maxWidth: 40,
+            maxHeight: 30,
+            maxWidth: 30,
           ),
           padding: EdgeInsets.zero,
         ),
 
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(15.0),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -92,21 +93,7 @@ class _DentalTestAddState extends State<DentalTestAdd> {
               ),
               SizedBoxes.smallSizedBox,
               const CustomText(text: "Tooth No"),
-              CustomDropdown(
-                hint: "select tooth no",
-                items: const [
-                  'Tooth one',
-                  'Tooth Two',
-                  'Tooth Three',
-                  'Tooth four',
-                ],
-                onChanged: (value) {
-                  setState(() {
-                    toothName = value!;
-                  });
-                },
-                value: toothName,
-              ),
+              ToothSelection(),
               SizedBoxes.smallSizedBox,
               const CustomText(text: "Note"),
               SizedBoxes.smallSizedBox,
@@ -158,7 +145,7 @@ class _DentalTestAddState extends State<DentalTestAdd> {
                       width: screenWidth*0.35,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color(0xffebfafc)),
+                          color: Color(0xffF1FDFF)),
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Row(
@@ -181,7 +168,7 @@ class _DentalTestAddState extends State<DentalTestAdd> {
                         width: screenWidth*0.35,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Color(0xffebfafc)),
+                            color: Color(0xffF1FDFF)),
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Row(
@@ -201,9 +188,9 @@ class _DentalTestAddState extends State<DentalTestAdd> {
                 width: double.infinity,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color(0xffebfafc)),
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                    color:const Color(0xffF1FDFF)),
+                child: const Padding(
+                  padding:  EdgeInsets.all(12.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -212,7 +199,7 @@ class _DentalTestAddState extends State<DentalTestAdd> {
                     ],),
                 ),
               ),
-              SizedBoxes.smallSizedBox,
+              SizedBoxes.largeSizedBox,
               Center(
                   child: ElevatedButton(
                       style:const  ButtonStyle(

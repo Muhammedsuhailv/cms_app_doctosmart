@@ -35,7 +35,7 @@ class _CustomDropdownState extends State<CustomDropdown> {
         Container(
           padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 4.0),
           decoration: BoxDecoration(
-            color: Color(0xffebfafc),
+            color: Color(0xffF1FDFF),
             borderRadius: BorderRadius.circular(10.0),
           ),
           child: DropdownButtonHideUnderline(
