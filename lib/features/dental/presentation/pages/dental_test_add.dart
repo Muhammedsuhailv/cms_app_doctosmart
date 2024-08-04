@@ -2,9 +2,7 @@ import 'package:cms_app/common/custom_dropdown.dart';
 import 'package:cms_app/common/custom_text.dart';
 import 'package:cms_app/common/custom_textfiled.dart';
 import 'package:cms_app/common/sized_box/sized_box.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../common/widgets/tooth_selection_dropdwon.dart';
 
 class DentalTestAdd extends StatefulWidget {
@@ -31,8 +29,8 @@ class _DentalTestAddState extends State<DentalTestAdd> {
         ),
         leading: IconButton(
           style: ButtonStyle(
-            minimumSize: WidgetStateProperty.all(Size(10, 10)),
-            backgroundColor: WidgetStateProperty.all(Color(0xffF1FDFF)),
+            minimumSize: WidgetStateProperty.all(const Size(10, 10)),
+            backgroundColor: WidgetStateProperty.all(const Color(0xffF1FDFF)),
           ),
           onPressed: () {},
           icon:const Center(
@@ -93,7 +91,7 @@ class _DentalTestAddState extends State<DentalTestAdd> {
               ),
               SizedBoxes.smallSizedBox,
               const CustomText(text: "Tooth No"),
-              ToothSelection(),
+              const ToothSelection(),
               SizedBoxes.smallSizedBox,
               const CustomText(text: "Note"),
               SizedBoxes.smallSizedBox,
@@ -142,12 +140,12 @@ class _DentalTestAddState extends State<DentalTestAdd> {
                     SizedBoxes.smallSizedBox,
                     Container(
                       height: 50,
-                      width: screenWidth*0.4,
+                      width: screenWidth*0.39,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color(0xffF1FDFF)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
+                          color: const Color(0xffF1FDFF)),
+                      child: const Padding(
+                        padding:  EdgeInsets.all(10.0),
                         child: Row(
                           children: [
                             Text("₹ ",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Color(0xff01BFE1)),),
@@ -165,12 +163,12 @@ class _DentalTestAddState extends State<DentalTestAdd> {
                       SizedBoxes.smallSizedBox,
                       Container(
                         height: 50,
-                        width: screenWidth*0.4,
+                        width: screenWidth*0.39,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Color(0xffF1FDFF)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(10.0),
+                            color: const Color(0xffF1FDFF)),
+                        child:const  Padding(
+                          padding:  EdgeInsets.all(10.0),
                           child: Row(
                             children: [
                               Text("% ",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Color(0xff01BFE1)),),
@@ -209,8 +207,7 @@ class _DentalTestAddState extends State<DentalTestAdd> {
                       child: const Text(
                         "SUBMIT",
                         style: TextStyle(color: Colors.white),
-                      )))
-            ],
+                      )))],
           ),
         ),
       ),

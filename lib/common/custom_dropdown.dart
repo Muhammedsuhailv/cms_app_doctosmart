@@ -6,7 +6,7 @@ class CustomDropdown extends StatefulWidget {
   final String? selectedItem;
   final String? hint;
 
-  CustomDropdown({
+  const CustomDropdown({
     required this.items,
     this.onChanged,
     this.selectedItem,
@@ -31,11 +31,11 @@ class _CustomDropdownState extends State<CustomDropdown> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 4.0),
+          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4.0),
           decoration: BoxDecoration(
-            color: Color(0xffF1FDFF),
+            color: const Color(0xffF1FDFF),
             borderRadius: BorderRadius.circular(10.0),
           ),
           child: DropdownButtonHideUnderline(
@@ -57,7 +57,7 @@ class _CustomDropdownState extends State<CustomDropdown> {
                   widget.onChanged!(newValue);
                 }
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_drop_down,
                 color: Color(0xff01BFE1),
                 size: 24,
