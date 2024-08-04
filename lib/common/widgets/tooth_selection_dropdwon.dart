@@ -133,7 +133,7 @@ class _ToothSelectionState extends State<ToothSelection> {
         ),
         const SizedBox(height: 16),
         Wrap(
-          spacing: 8.0,
+          spacing: 15.0,
           runSpacing: 4.0,
           children: selectedItems.map((item) {
             return Stack(
@@ -162,8 +162,8 @@ class _ToothSelectionState extends State<ToothSelection> {
                   ),
                 ),
                 Positioned(
-                  top: -8,
-                  right: -8,
+                  top: -20,
+                  right: -25,
                   child: IconButton(
                     onPressed: () {
                       setState(() {
