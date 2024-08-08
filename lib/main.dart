@@ -1,5 +1,5 @@
-import 'package:cms_app/common/widgets/tooth_selection_dropdwon.dart';
-import 'package:cms_app/features/dental/presentation/pages/dental_test_add.dart';
+import 'package:cms_app/features/prescription/presentation/pages/prescription_add1.dart';
+import 'package:cms_app/features/prescription/presentation/pages/prescription_add2.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: DentalTestAdd(),
+      home: PrescriptionAdd1(),
     );
   }
 }

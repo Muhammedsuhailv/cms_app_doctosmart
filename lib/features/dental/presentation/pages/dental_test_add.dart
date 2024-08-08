@@ -1,6 +1,7 @@
-import 'package:cms_app/common/custom_dropdown.dart';
-import 'package:cms_app/common/custom_text.dart';
-import 'package:cms_app/common/custom_textfiled.dart';
+import 'package:cms_app/common/widgets/custom_dropdown.dart';
+import 'package:cms_app/common/widgets/custom_eleveated_btn.dart';
+import 'package:cms_app/common/widgets/custom_text.dart';
+import 'package:cms_app/common/widgets/custom_textfiled.dart';
 import 'package:cms_app/common/sized_box/sized_box.dart';
 import 'package:flutter/material.dart';
 import '../../../../common/widgets/tooth_selection_dropdwon.dart';
@@ -96,6 +97,7 @@ class _DentalTestAddState extends State<DentalTestAdd> {
               const CustomText(text: "Note"),
               SizedBoxes.smallSizedBox,
               CustomTextfield(
+                maxLines: 3,
                 hint: "Enter notes here",
               ),
               SizedBoxes.smallSizedBox,
@@ -198,16 +200,8 @@ class _DentalTestAddState extends State<DentalTestAdd> {
                 ),
               ),
               SizedBoxes.largeSizedBox,
-              Center(
-                  child: ElevatedButton(
-                      style:const  ButtonStyle(
-                          backgroundColor:
-                              WidgetStatePropertyAll(Color(0xff01BFE1))),
-                      onPressed: () {},
-                      child: const Text(
-                        "SUBMIT",
-                        style: TextStyle(color: Colors.white),
-                      )))],
+           const CustomButton(text: "SUBMIT"),
+            ],
           ),
         ),
       ),
