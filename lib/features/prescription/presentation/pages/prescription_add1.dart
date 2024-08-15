@@ -1,5 +1,5 @@
 import 'package:cms_app/common/sized_box/sized_box.dart';
-import 'package:cms_app/features/prescription/presentation/pages/prescription_add2.dart';
+import 'package:cms_app/features/prescription/presentation/pages/prescription_popup.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/custom_dropdown.dart';
@@ -32,7 +32,7 @@ class _PrescriptionAdd1State extends State<PrescriptionAdd1> {
 
   @override
   Widget build(BuildContext context) {
-    var screenWidth = MediaQuery.of(context).size.width;
+    // var screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -88,31 +88,45 @@ class _PrescriptionAdd1State extends State<PrescriptionAdd1> {
               SizedBoxes.smallSizedBox,
               const CustomText(text: "Date"),
               SizedBoxes.smallSizedBox,
-              TextFormField(
-                decoration: InputDecoration(
-                  prefixText: "${_selectedDate.toLocal()}".split(' ')[0],
-                  suffixIcon: InkWell(
-                    onTap: () => _selectDate(context),
-                    child: const Icon(
-                      Icons.calendar_month,
-                      color: Color(0xff01BFE1),
+              Stack(
+                alignment: Alignment.centerLeft,
+                children: [
+                  TextFormField(
+                    decoration: InputDecoration(
+                      suffixIcon: InkWell(
+                        onTap: () => _selectDate(context),
+                        child: const Icon(
+                          Icons.calendar_month,
+                          color: Color(0xff01BFE1),
+                        ),
+                      ),
+                      filled: true,
+                      fillColor: const Color(0xffF1FDFF),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide.none,
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide.none,
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide.none,
+                      ),
                     ),
                   ),
-                  filled: true,
-                  fillColor: const Color(0xffF1FDFF),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide.none,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 12.0),
+                    child: Text(
+                      "${_selectedDate.toLocal()}".split(' ')[0],
+                      style:const TextStyle(
+                        color: Colors.black54,
+                        fontSize: 16.0,
+                      ),
+                    ),
                   ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide.none,
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide.none,
-                  ),
-                ),
+                ],
               ),
               SizedBoxes.smallSizedBox,
               const CustomText(text: "Doctor"),
@@ -148,7 +162,7 @@ class _PrescriptionAdd1State extends State<PrescriptionAdd1> {
                             minHeight: 20,
                           ),
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => PrescriptionPopup(),));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const PrescriptionPopup(),));
                           },
                           icon: const Icon(Icons.add, color: Colors.white),
                           style: ButtonStyle(

@@ -33,7 +33,9 @@ class _DentalTestAddState extends State<DentalTestAdd> {
             minimumSize: WidgetStateProperty.all(const Size(10, 10)),
             backgroundColor: WidgetStateProperty.all(const Color(0xffF1FDFF)),
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon:const Center(
             child: Icon(
               Icons.arrow_back_ios,
@@ -92,6 +94,7 @@ class _DentalTestAddState extends State<DentalTestAdd> {
               ),
               SizedBoxes.smallSizedBox,
               const CustomText(text: "Tooth No"),
+              SizedBoxes.smallSizedBox,
               const ToothSelection(),
               SizedBoxes.smallSizedBox,
               const CustomText(text: "Note"),

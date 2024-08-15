@@ -28,8 +28,8 @@ class _PrescriptionPopupState extends State<PrescriptionPopup> {
         ),
         leading: IconButton(
           style: ButtonStyle(
-            minimumSize: MaterialStateProperty.all(const Size(10, 10)),
-            backgroundColor: MaterialStateProperty.all(const Color(0xffF1FDFF)),
+            minimumSize: WidgetStateProperty.all(const Size(10, 10)),
+            backgroundColor: WidgetStateProperty.all(const Color(0xffF1FDFF)),
           ),
           onPressed: () {
             Navigator.pop(context);
