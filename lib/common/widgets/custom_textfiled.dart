@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class CustomTextfield extends StatelessWidget {
   String? hint;
+  final Color? clr;
   int? maxLines;
-  CustomTextfield({super.key,this.hint,this.maxLines});
+  CustomTextfield({super.key,this.hint,this.maxLines,this.clr});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,7 @@ class CustomTextfield extends StatelessWidget {
       maxLines: maxLines,
       decoration: InputDecoration(
         filled: true,
-        fillColor:const Color(0xffF1FDFF),
+        fillColor: clr ?? const Color(0xffF1FDFF),
         hintText:hint!,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),

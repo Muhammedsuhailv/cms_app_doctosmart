@@ -351,10 +351,10 @@ class _LaboratoryState extends State<Laboratory> {
                       Container(
                         padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                          color: Color(0xff01BFE1),
+                          color:const  Color(0xff01BFE1),
                           borderRadius: BorderRadius.circular(8),
-                          boxShadow: [
-                            const BoxShadow(
+                          boxShadow: const [
+                             BoxShadow(
                               color: Colors.black26,
                               blurRadius: 8,
                               offset: Offset(0, 5),
@@ -378,11 +378,10 @@ class _LaboratoryState extends State<Laboratory> {
                     ],
                   ),
                 ),
-              // FloatingActionButton at the bottom center
               Positioned(
                 bottom: 15,
                 left: MediaQuery.of(context).size.width / 2 - 28,
-                child: FloatingActionButton(
+                child:  FloatingActionButton(
                   onPressed: _toggleFab,
                   backgroundColor: const Color(0xff01BFE1),
                   shape: const CircleBorder(),
